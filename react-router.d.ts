@@ -765,7 +765,7 @@ declare module ReactRouter {
 	 * @param {routes: RouteConfig}
 	 * @param {(error:Error, redirectLocation:Location, renderProps : Object) => void} callback
 	 */
-	export function match({routes: RouteConfig}, callback: (error: Error, redirectLocation: Location, renderProps: Object) => void): void;
+	export function match(routes: {routes: RouteConfig}, callback: (error: Error, redirectLocation: Location, renderProps: Object) => void): void;
 
 	/**
 	 * Creates and returns an array of routes from the given object which may be a JSX route, a plain object route, or an array of either.
