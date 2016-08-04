@@ -17,6 +17,8 @@
     "blue-tape": "^0.2.0",
     "jspm": "^0.16.42",
     "onchange": "^2.5.0",
+    "react": "15.3.0",
+    "react-router": "2.6.1",
     "stream": "0.0.2",
     "tap-spec": "^4.1.1",
     "tape-run": "^2.1.4",
