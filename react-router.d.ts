@@ -58,7 +58,7 @@ declare namespace ReactRouter {
 		 * @param {Components<IProps, any>} component
 		 * @param {IProps} props
 		 */
-		createElement?<IProps>(component: ReactComponent<IProps>, props: IProps): JSX.Element;
+		createElement?<IProps>(component: ReactComponent<IProps>, props: IProps): React.ReactElement<IProps>;
 
 		/**
 		 * A function used to convert an object from <Link>s or calls to transitionTo to a URL query string.
@@ -91,7 +91,7 @@ declare namespace ReactRouter {
 		 * This is primarily for integrating with other libraries that need to participate in rendering before the route components are rendered. It defaults to render={(props) => <RouterContext {...props} />}.
 		 * Ensure that you render a <RouterContext> at the end of the line, passing all the props passed to render.
 		 */
-		render?<IProps>(props: IProps): JSX.Element;
+		render?<IProps>(props: IProps): React.ReactElement<IProps>;
 	}
 
 
@@ -785,7 +785,7 @@ declare namespace ReactRouter {
 	/**
 	 * Add router object to props of pure component
 	 */
-	export function withRouter<T>(fun: (props: T & { router: IRouter }) => JSX.Element): (props: T) => JSX.Element;
+	export function withRouter<T>(fun: (props: T & { router: IRouter }) => React.ReactElement<T>): (props: T) => React.ReactElement<T>;
 
 	/**
 	 * Add router object to props of component
@@ -795,7 +795,7 @@ declare namespace ReactRouter {
 	/**
 	 * Apply Router middleware (for using in <Router render={applyRouterMiddleware(...)} ... />)
 	 */
-	export function applyRouterMiddleware<T extends Function>(middleware: T): <IProps>(props: IProps) => JSX.Element;
+	export function applyRouterMiddleware<T extends Function>(middleware: T): <IProps>(props: IProps) => React.ReactElement<IProps>;
 }
 
 export = ReactRouter;
