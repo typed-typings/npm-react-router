@@ -7,10 +7,10 @@
     "source-test": "echo running source tests... &&  echo no source test",
     "test": "echo running server tests... && cd test && ts-node ../node_modules/blue-tape/bin/blue-tape \"**/*.ts\" | tap-spec",
     "watch": "onchange -w \"**/*.ts\" -i -e \"out/**\" -- npm -s run build+test",
-    "publish": "npm -s run lint+build+test && echo please publish to typings/registry",
+    "publish": "npm -s run verify && echo please publish to typings/registry",
     "all-tests": "npm test",
     "build+test": "npm run build && npm run all-tests",
-    "lint+build+test": "npm run lint && npm run build+test",
+    "verify": "npm run build+test",
     "prepublish": "typings install"
   },
   "devDependencies": {
