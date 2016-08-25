@@ -516,7 +516,7 @@ declare namespace ReactRouter {
 		 * @param {Location} location
 		 * @param {(error: Error, components: { [name: string]: Component<any> }) => void} callback
 		 */
-		getComponent?(location: Location, callback: (error: Error, components: { [name: string]: ReactComponent<any> }) => void): void;
+		getComponents?(location: Location, callback: (error: Error, components: { [name: string]: ReactComponent<any> }) => void): void;
 
 		/**
 		 * Routes can be nested, this.props.children will contain the element created from the child route component. Please refer to the Route Configuration since this is a very critical part of the router's design.
