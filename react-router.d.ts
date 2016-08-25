@@ -357,9 +357,9 @@ declare namespace ReactRouter {
 		 *   }
 		 * }
 		 * @param {Location} location
-		 * @param {(err: Error, routes: PlainRoute[]) => void} callback
+		 * @param {(err: Error | null, routes: PlainRoute[]) => void} callback
 		 */
-		getChildRoutes?(location: Location, callback: (err: Error, routes: PlainRoute[]) => void): void;
+		getChildRoutes?(location: Location, callback: (err: Error | null, routes: PlainRoute[]) => void): void;
 
 		/**
 		 * The index route. This is the same as specifying an <IndexRoute> child when using JSX route configs.
@@ -390,10 +390,10 @@ declare namespace ReactRouter {
 		 *   }
 		 * }
 		 * @param {Location} location
-		 * @param {(err: Error, route: PlainRoute) => void} callback
+		 * @param {(err: Error | null, route: PlainRoute) => void} callback
 		 */
 
-		getIndexRoute?(location: Location, callback: (err: Error, route: PlainRoute) => void): void;
+		getIndexRoute?(location: Location, callback: (err: Error | null, route: PlainRoute) => void): void;
 	}
 
 	export interface IRedirectProps extends IIndexRedirectProps {
@@ -501,9 +501,9 @@ declare namespace ReactRouter {
 		 * }} />
 		 *
 		 * @param {Location} location
-		 * @param {(error: Error, component: Component<any>) => void} callback
+		 * @param {(error: Error | null, component: Component<any>) => void} callback
 		 */
-		getComponent?(location: Location, callback: (error: Error, component: ReactComponent<any>) => void): void;
+		getComponent?(location: Location, callback: (error: Error | null, component: ReactComponent<any>) => void): void;
 
 		/**
 		 * Same as components but asynchronous, useful for code-splitting.
@@ -514,9 +514,9 @@ declare namespace ReactRouter {
 		 *   cb(null, {sidebar: CourseSidebar, content: Course})
 		 * }} />
 		 * @param {Location} location
-		 * @param {(error: Error, components: { [name: string]: Component<any> }) => void} callback
+		 * @param {(error: Error | null, components: { [name: string]: Component<any> }) => void} callback
 		 */
-		getComponent?(location: Location, callback: (error: Error, components: { [name: string]: ReactComponent<any> }) => void): void;
+		getComponent?(location: Location, callback: (error: Error | null, components: { [name: string]: ReactComponent<any> }) => void): void;
 
 		/**
 		 * Routes can be nested, this.props.children will contain the element created from the child route component. Please refer to the Route Configuration since this is a very critical part of the router's design.
@@ -770,9 +770,9 @@ declare namespace ReactRouter {
 	 *
 	 * @export
 	 * @param {routes: RouteConfig}
-	 * @param {(error:Error, redirectLocation:Location, renderProps : Object) => void} callback
+	 * @param {(error: Error | null, redirectLocation:Location, renderProps : Object) => void} callback
 	 */
-	export function match(args: IMatchArgs, callback: (error: Error, redirectLocation: Location, renderProps: Object) => void): void;
+	export function match(args: IMatchArgs, callback: (error: Error | null, redirectLocation: Location, renderProps: Object) => void): void;
 
 	/**
 	 * Creates and returns an array of routes from the given object which may be a JSX route, a plain object route, or an array of either.
