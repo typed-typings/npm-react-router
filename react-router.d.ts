@@ -558,7 +558,7 @@ declare namespace ReactRouter {
 
 	type ChangeHook = (prevState: RouterState, nextState: RouterState, replace: RedirectFunction, callback?: Function) => any;
 
-	type RedirectFunction = (state: LocationState, pathname: Pathname | Path, query?: Query) => void;
+	type RedirectFunction = (pathOrLoc: LocationDescriptor) => void;
 
 	type LocationState = Object;
 
