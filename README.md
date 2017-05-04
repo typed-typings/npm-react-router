@@ -1,5 +1,7 @@
 # Typings-React-Router
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/types/npm-react-router.svg)](https://greenkeeper.io/)
+
 This is typings for thee [react-router](https://github.com/reactjs/react-router)
 
 It's highly suggested to install with [typings](https://github.com/typings/typings) definition manager.
