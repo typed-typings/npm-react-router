@@ -18,7 +18,7 @@
     "jspm": "^0.16.42",
     "onchange": "^3.2.1",
     "react": "15.5.4",
-    "react-router": "4.1.1",
+    "react-router": "4.2.0",
     "stream": "0.0.2",
     "tap-spec": "^4.1.1",
     "tape-run": "^3.0.0",
