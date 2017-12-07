@@ -16,7 +16,7 @@
   "devDependencies": {
     "blue-tape": "^1.0.0",
     "jspm": "^0.16.42",
-    "onchange": "^3.2.1",
+    "onchange": "^3.3.0",
     "react": "15.5.4",
     "react-router": "4.1.1",
     "stream": "0.0.2",
