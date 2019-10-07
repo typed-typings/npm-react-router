@@ -2,12 +2,12 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/types/npm-react-router.svg)](https://greenkeeper.io/)
 
-This is typings for thee [react-router](https://github.com/reactjs/react-router)
+This is typings for the [react-router](https://github.com/reactjs/react-router)
 
 It's highly suggested to install with [typings](https://github.com/typings/typings) definition manager.
 Use the command `typings install react-router --save`.
 
-You're code should look pretty much the same the javascript with one exception.
+Your code should look pretty much the same as the javascript with one exception.
 When a component is used with a `Route` component it injects several property values.
 To type this the `IInjectedProps` interface has all the properties defined that injecting will add.
 
